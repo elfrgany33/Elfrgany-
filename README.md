@@ -40,3 +40,12 @@
     </footer>
 </body>
 </html>
+<h2>عنوان الدرس</h2>
+<div class="video-container">
+    <video controls>
+        <source src="lesson.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+    </video>
+</div>
+<p>شرح مفصل للدرس مع أمثلة توضيحية ورسومات بيانية.</p>
+<a href="quiz.html">اختبار قصير</a>
