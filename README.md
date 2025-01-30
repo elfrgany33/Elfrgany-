@@ -78,3 +78,20 @@
         }
     });
 </script>
+import mysql.connector
+
+mydb = mysql.connector.connect(
+  host="yourhost",
+  user="youruser",
+  password="yourpassword",
+  database="yourdatabase"
+)
+
+mycursor = mydb.cursor()
+
+sql = "SELECT * FROM users WHERE username = %s"
+val = ("John",)
+
+mycursor.execute(sql, val)
+
+myresult = mycursor.fetchall()
