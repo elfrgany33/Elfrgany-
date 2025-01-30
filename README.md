@@ -64,3 +64,82 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>منصة elfrgany التعليمية</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="شعار elfrgany">
+    <nav>
+      <a href="courses.html">الدورات</a>
+      <a href="materials.html">المواد</a>
+      <a href="tests.html">الاختبارات</a>
+      <a href="forum.html">المنتدى</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>مرحباً بكم في منصة elfrgany التعليمية</h2>
+      <p>منصة تعليمية شاملة تسعى لتقديم تعليم متميز للطلاب في مختلف المراحل.</p>
+    </section>
+
+    <section id="featured-courses">
+      <h2>أحدث الدورات</h2>
+      <div class="course">
+        <img src="course1.jpg" alt="صورة الدورة">
+        <h3>دورة في الرياضيات</h3>
+        <a href="course_details.html">عرض التفاصيل</a>
+      </div>
+      {المزيد من الدورات}
+    </section>
+  </main>
+
+  <footer>
+    <p>جميع الحقوق محفوظة &copy; 2024</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>عنوان الفيديو - منصة elfrgany</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    {شعار الموقع، روابط الأقسام}
+  </header>
+
+  <main>
+    <section id="video-area">
+      <h2>عنوان الفيديو</h2>
+      <video controls>
+        <source src="video.mp4" type="video/mp4">
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
+      <p>وصف الفيديو: شرح موجز لمحتوى الفيديو وأهميته.</p>
+    </section>
+
+    <section id="related-materials">
+      <h3>مواد تعليمية مرتبطة</h3>
+      <ul>
+        <li><a href="file.pdf">ملف PDF</a></li>
+        <li><a href="link">رابط لمصدر خارجي</a></li>
+      </ul>
+    </section>
+
+    <section id="comments">
+      <h3>التعليقات</h3>
+      {نظام التعليقات}
+    </section>
+  </main>
+
+  <footer>
+    {حقوق النشر}
+  </footer>
+</body>
+</html>
