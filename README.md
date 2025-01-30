@@ -54,3 +54,27 @@
     {أسئلة الاختبار وخيارات الإجابة}
     <button type="submit">إرسال الإجابات</button>
 </form>
+<h2>تسجيل طالب جديد</h2>
+<form id="registration-form">
+    <input type="text" id="name" placeholder="الاسم الكامل" required>
+    <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+    <input type="password" id="password" placeholder="كلمة المرور" required>
+    {بقية بيانات الطالب}
+    <button type="submit">تسجيل</button>
+</form>
+
+<script>
+    // التحقق من صحة البيانات المدخلة باستخدام JavaScript
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+        // التحقق من أن جميع الحقول مطلوبة
+        // التحقق من صحة البريد الإلكتروني
+        // التحقق من قوة كلمة المرور
+        // ...
+
+        // إذا كان هناك أي أخطاء، قم بإيقاف إرسال النموذج وعرض رسالة خطأ للمستخدم
+        if (errors) {
+            event.preventDefault();
+            // عرض رسائل الخطأ
+        }
+    });
+</script>
