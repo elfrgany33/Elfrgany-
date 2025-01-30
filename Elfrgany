@@ -1,0 +1,149 @@
+import os
+
+# Creating project folder and necessary files
+project_folder = '/mnt/data/elfrgany'
+os.makedirs(project_folder, exist_ok=True)
+
+# HTML content
+html_content = """
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>elfrgany</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <header>
+        <div class="container">
+            <h1 id="logo">elfrgany</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" data-lang="home">الرئيسية</a></li>
+                    <li><a href="#about" data-lang="about">من نحن</a></li>
+                    <li><a href="#services" data-lang="services">الخدمات</a></li>
+                    <li><a href="#contact" data-lang="contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <button id="lang-switch">EN</button>
+        </div>
+    </header>
+
+    <!-- الصفحة الرئيسية -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2 data-lang="welcome">مرحبًا بكم في elfrgany</h2>
+            <p data-lang="desc">نحن نقدم أفضل الخدمات بأعلى جودة.</p>
+            <a href="#contact" class="btn" data-lang="contact-btn">تواصل معنا</a>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 elfrgany. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+"""
+
+# CSS content
+css_content = """
+/* تنسيقات عامة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+}
+
+/* شريط التنقل */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 15px 0;
+}
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul li {
+    margin-left: 20px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* الصفحة الرئيسية */
+.hero {
+    background: #0056b3;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* الفوتر */
+footer {
+    background: #003f7f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+"""
+
+# JavaScript content
+js_content = """
+document.getElementById("lang-switch").addEventListener("click", function() {
+    let elements = document.querySelectorAll("[data-lang]");
+    let lang = document.documentElement.lang === "ar" ? "en" : "ar";
+
+    let translations = {
+        "home": { "ar": "الرئيسية", "en": "Home" },
+        "about": { "ar": "من نحن", "en": "About Us" },
+        "services": { "ar": "الخدمات", "en": "Services" },
+        "contact": { "ar": "اتصل بنا", "en": "Contact Us" },
+        "welcome": { "ar": "مرحبًا بكم في elfrgany", "en": "Welcome to elfrgany" },
+        "desc": { "ar": "نحن نقدم أفضل الخدمات بأعلى جودة.", "en": "We provide top-quality services." },
+        "contact-btn": { "ar": "تواصل معنا", "en": "Contact Us" }
+    };
+
+    elements.forEach(el => {
+        let key = el.getAttribute("data-lang");
+        if (translations[key]) {
+            el.textContent = translations[key][lang];
+        }
+    });
+
+    document.getElementById("lang-switch").textContent = lang === "ar" ? "EN" : "عربي";
+    document.documentElement.lang = lang;
+});
+"""
+
+# Write files to the project folder
+with open(f"{project_folder}/index.html", "w", encoding="utf-8") as file:
+    file.write(html_content)
+
+with open(f"{project_folder}/style.css", "w", encoding="utf-8") as file:
+    file.write(css_content)
+
+with open(f"{project_folder}/script.js", "w", encoding="utf-8") as file:
+    file.write(js_content)
+
+project_folder  # Return the path to the generated folder
