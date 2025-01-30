@@ -25,3 +25,42 @@
     <script src="login.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+<head>
+<title>نموذج تسجيل طالب</title>
+</head>
+<body>
+
+  <h2>تسجيل طالب</h2>
+
+  <form action="process_registration.php" method="post">
+    <label for="name">الاسم:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="age">العمر:</label><br>
+    <input type="number" id="age" name="age" min="1" required><br><br>
+
+    <label for="parent_name">اسم ولي الأمر:</label><br>
+    <input type="text" id="parent_name" name="parent_name" required><br><br>
+
+    <label for="grade">المرحلة الدراسية:</label><br>
+    <select id="grade" name="grade" required>
+      <option value="first_secondary">الصف الأول الثانوي</option>
+      <option value="second_secondary">الصف الثاني الثانوي</option>
+      <option value="third_secondary">الصف الثالث الثانوي</option>
+    </select><br><br>
+
+    <label for="governorate">المحافظة:</label><br>
+    <select id="governorate" name="governorate" required>
+      <option value="القاهرة">القاهرة</option>
+      <option value="الجيزة">الجيزة</option>
+      <option value="الإسكندرية">الإسكندرية</option>
+      {أضف بقية محافظات مصر هنا}
+    </select><br><br>
+
+    <input type="submit" value="تسجيل">
+  </form>
+
+</body>
+</html>
